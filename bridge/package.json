@@ -1,6 +1,6 @@
 {
     "name": "@warren-bank/fx_cast_bridge",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "description": "fx_cast companion application (bridge)",
     "license": "MIT",
     "type": "commonjs",
