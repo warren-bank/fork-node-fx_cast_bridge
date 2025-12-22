@@ -1,10 +1,9 @@
 {
     "type": "module",
     "scripts": {
-        "build": "node bin/build.js",
-        "package": "node bin/build.js --package",
-        "install-manifest": "node bin/install-manifest.js",
-        "remove-manifest": "node bin/install-manifest.js --remove"
+        "compile": "tsc --project . --outDir ./js",
+        "pretty": "prettier --write \"./js/**/*.js\"",
+        "build": "npm run compile && npm run pretty"
     },
     "dependencies": {
         "bplist-creator": "^0.1.0",
@@ -12,7 +11,6 @@
         "castv2": "^0.1.10",
         "chalk": "^4.1.2",
         "fast-srp-hap": "^2.0.4",
-        "mdns": "^2.7.2",
         "mime-types": "^2.1.35",
         "node-fetch": "^3.2.10",
         "tweetnacl": "^1.0.3",
@@ -29,8 +27,6 @@
         "@types/yargs": "^17.0.11",
         "fs-extra": "^10.1.0",
         "mustache": "^4.2.0",
-        "pkg": "^5.6.0",
-        "tiny-typed-emitter": "^2.1.0",
-        "typescript": "^4.6.3"
+        "tiny-typed-emitter": "^2.1.0"
     }
 }
