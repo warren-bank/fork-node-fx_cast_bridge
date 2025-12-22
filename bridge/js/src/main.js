@@ -121,7 +121,8 @@ const argv = (0, yargs_1.default)()
         alias: "d",
         describe: `Launch in daemon mode. This starts a WebSocket server that \
 the extension can be configured to connect to under bridge options.`,
-        type: "boolean"
+        type: "boolean",
+        default: true
     })
     .option("host", {
         alias: "n",
@@ -163,6 +164,9 @@ HTTPS server.`,
         type: "string"
     })
     .check(argv => {
+        if (!argv.daemon) {
+            argv.daemon = true;
+        }
         if (argv.port < 1025 || argv.port > 65535) {
             throw new Error("Invalid port specified!");
         }

@@ -20,6 +20,7 @@
         "chalk": "^4.1.2",
         "fast-srp-hap": "^2.0.4",
         "mime-types": "^2.1.35",
+        "node-dns-sd": "^1.0.1",
         "node-fetch": "^3.2.10",
         "tweetnacl": "^1.0.3",
         "ws": "^8.5.0",
