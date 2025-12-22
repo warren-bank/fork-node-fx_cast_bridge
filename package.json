@@ -1,5 +1,0 @@
-{
-    "scripts": {
-        "build:bridge": "cd bridge && npm run build"
-    }
-}

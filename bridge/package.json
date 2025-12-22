@@ -1,10 +1,5 @@
 {
     "type": "module",
-    "scripts": {
-        "compile": "tsc --project . --outDir ./js",
-        "pretty": "prettier --write \"./js/**/*.js\"",
-        "build": "npm run compile && npm run pretty"
-    },
     "dependencies": {
         "bplist-creator": "^0.1.0",
         "bplist-parser": "^0.3.1",
