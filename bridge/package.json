@@ -1,5 +1,18 @@
 {
-    "type": "module",
+    "name": "@warren-bank/fx_cast_bridge",
+    "version": "0.3.1",
+    "description": "fx_cast companion application (bridge)",
+    "license": "MIT",
+    "type": "commonjs",
+    "files": [
+        "js/"
+    ],
+    "bin": {
+        "fx_cast_bridge": "./js/src/main.js"
+    },
+    "scripts": {
+        "start": "node ./js/src/main.js"
+    },
     "dependencies": {
         "bplist-creator": "^0.1.0",
         "bplist-parser": "^0.3.1",
@@ -23,5 +36,15 @@
         "fs-extra": "^10.1.0",
         "mustache": "^4.2.0",
         "tiny-typed-emitter": "^2.1.0"
-    }
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/warren-bank/fork-node-fx_cast_bridge"
+    },
+    "keywords": [
+        "fx_cast",
+        "bridge",
+        "firefox",
+        "chromecast"
+    ]
 }
