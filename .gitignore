@@ -1,9 +1,1 @@
-node_modules/
-dist/
 bridge/node_modules/
-bridge/build
-extension/node_modules/
-test/ChromeProfile/
-.idea/
-*.iml
-.DS_Store

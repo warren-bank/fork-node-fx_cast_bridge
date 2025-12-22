@@ -1,33 +1,5 @@
 {
     "scripts": {
-        "postinstall": "npm run postinstall:bridge && npm run postinstall:extension",
-        "postinstall:bridge": "cd bridge && npm install",
-        "postinstall:extension": "cd extension && npm install",
-        "build": "npm run build:bridge && npm run build:extension",
-        "build:bridge": "cd bridge && npm run build",
-        "build:extension": "cd extension && npm run build",
-        "watch:extension": "cd extension && npm run watch",
-        "start:extension": "cd extension && npm run start",
-        "package": "npm run package:bridge && npm run package:extension",
-        "package:bridge": "cd bridge && npm run package",
-        "package:extension": "cd extension && npm run package",
-        "test": "node test/driver.js",
-        "install-manifest": "cd bridge && npm run install-manifest",
-        "remove-manifest": "cd bridge && npm run remove-manifest",
-        "lint": "npm run lint:bridge && npm run lint:extension",
-        "lint:bridge": "eslint bridge/src --ext .ts,.js",
-        "lint:extension": "eslint extension/src --ext .ts,.js,.svelte"
-    },
-    "devDependencies": {
-        "@typescript-eslint/eslint-plugin": "^5.14.0",
-        "@typescript-eslint/parser": "^5.14.0",
-        "eslint": "^8.16.0",
-        "eslint-config-prettier": "^8.5.0",
-        "eslint-plugin-svelte3": "^4.0.0",
-        "jasmine-console-reporter": "^3.1.0",
-        "prettier": "^2.5.1",
-        "prettier-plugin-svelte": "^2.7.0",
-        "selenium-webdriver": "^4.1.1",
-        "ws": "^8.5.0"
+        "build:bridge": "cd bridge && npm run build"
     }
 }

@@ -1,7 +1,0 @@
-Package: {{packageName}}
-Version: {{applicationVersion}}
-Priority: optional
-Maintainer: {{{author}}}
-Architecture: amd64
-Description: {{applicationName}}
-Depends: avahi-daemon, libavahi-compat-libdnssd1
