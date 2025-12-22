@@ -31,6 +31,10 @@ The intended purpose for this fork of the companion application (bridge) is to:
     * to summarize, this means that:
       - the bridge runs a WebSocket server and listens for incoming connections from the extension
       - the extension needs to be configured to make such a connection w/ the following parameters:
+        * enable backup daemon connection?
+          - required
+          - value: `true`
+          - default: `false`
         * host
           - required
           - default: `localhost`
@@ -49,7 +53,9 @@ The intended purpose for this fork of the companion application (bridge) is to:
 
 ## Usage
 
-Clicking on the toolbar button or `Cast...` menu item in the page context menu will open a popup that shows a list of receiver devices will allow you to start casting the currently detected app[^cast_app] or media.
+1. Start the companion application (bridge):<br>`fx_cast_bridge` &lt;[_options_](https://github.com/hensm/fx_cast/wiki/daemon#options)&gt;
+2. Configure the Firefox extension
+3. Click on the toolbar button or `Cast...` menu item in the page context menu to open a popup that shows a list of receiver devices, which will allow you to start casting the currently detected app[^cast_app] or media
 
 ### Site Whitelist
 
