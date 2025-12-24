@@ -11,11 +11,13 @@ A Firefox extension that implements the Chromecast API and exposes it to web app
 
 Install the Firefox extension from:
 * [releases](https://github.com/hensm/fx_cast/releases) for the original project
+* [releases](https://github.com/warren-bank/fork-node-fx_cast_bridge/releases) for the forked project
+  - [v0.3.1](https://github.com/warren-bank/fork-node-fx_cast_bridge/releases/tag/v0.3.1) includes a copy of the XPI from the original project
 
 Install the companion application (bridge) from:
-* `npm`:
+* _npm_:
   ```bash
-    npm install -g '@warren-bank/fx_cast_bridge'
+    npm install --global "@warren-bank/fx_cast_bridge"
   ```
 
 ## Fork
@@ -27,34 +29,34 @@ The intended purpose for this fork of the companion application (bridge) is to:
     * compiled to Javascript w/ [`tsc`](https://github.com/microsoft/TypeScript)
     * packaged to a native executable w/ [`pkg`](https://github.com/vercel/pkg)
   - the reason it is packaged to a native executable is the way Firefox's built-in [native messaging system](https://wiki.mozilla.org/WebExtensions/Native_Messaging) works
-    * this fork disables native messaging, and only runs in [daemon mode](https://github.com/hensm/fx_cast/wiki/daemon)
+    * this fork disables native messaging, and only runs in [daemon mode](https://github.com/warren-bank/fork-node-fx_cast_bridge/wiki/Daemon)
     * to summarize, this means that:
       - the bridge runs a WebSocket server and listens for incoming connections from the extension
-      - the extension needs to be configured to make such a connection w/ the following parameters:
-        * enable backup daemon connection?
-          - required
-          - value: `true`
-          - default: `false`
-        * host
-          - required
-          - default: `localhost`
-        * port
-          - required
-          - default: `9556`
-        * secure connection?
-          - optional
-          - default: `false`
-        * password
-          - optional
-          - default: _none_
+      - the extension needs to be configured to make such a connection
 * replace troublesome dependencies
   - `mdns`
     * its [installation](https://github.com/agnat/node_mdns#installation) requires a compiler toolchain and the installation of 3rd-party libraries
 
 ## Usage
 
-1. Start the companion application (bridge):<br>`fx_cast_bridge` &lt;[_options_](https://github.com/hensm/fx_cast/wiki/daemon#options)&gt;
-2. Configure the Firefox extension
+1. Start the companion application (bridge):<br>`fx_cast_bridge` &lt;[_options_](https://github.com/warren-bank/fork-node-fx_cast_bridge/wiki/Daemon#options)&gt;
+2. Configure the Firefox extension w/ the following parameters:
+   * enable backup daemon connection?
+     - required
+     - value: `true`
+     - default: `false`
+   * host
+     - required
+     - default: `localhost`
+   * port
+     - required
+     - default: `9556`
+   * secure connection?
+     - optional
+     - default: `false`
+   * password
+     - optional
+     - default: _none_
 3. Click on the toolbar button or `Cast...` menu item in the page context menu to open a popup that shows a list of receiver devices, which will allow you to start casting the currently detected app[^cast_app] or media
 
 ### Site Whitelist
